@@ -1,0 +1,26 @@
+<div class="container">
+    <h1>Angular Pipes Example</h1>
+    <p>Original String: {{ text }} </p>
+    <p>Uppercase: {{text | uppercase }}</p>
+    <p>Lowercase: {{text | lowercase }}</p>
+    <p>Titlecase: {{text | titlecase }}</p>
+    <p>Capitalize: {{text | capitalize }}</p>
+    <p>Date: {{today | date}}</p>
+    <p>Currency: {{price | currency }}</p>
+    <p>Price: {{ price | currency:'JPY':'symbol-narrow':'4.2-2' }}</p>
+    <p>Reverse: {{text | reverse}}</p>
+    <p>Prefix: {{name | addPrefix: 'Hello, ' }}</p>
+    
+    <form action="" class="form">
+        <div>
+            <label for="input">Name</label>
+            <input type="text" class="custom-input" name="input" id="input" [(ngModel)]="inputvalue">
+        </div>
+    </form>
+    
+    <div class="form">
+        <P>{{inputvalue | primeNumber | json }}</P>
+    </div>
+    <p>{{paragraph | truncatePipe}}</p>
+    <p>{{htmltext | htmlStripPipe}}</p>
+</div>
